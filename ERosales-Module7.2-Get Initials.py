@@ -1,5 +1,5 @@
 # Edgar Rosales
-# 16Feb2024
+# 20Feb2024
 # Module 6.2 assignment:
 
 # Write a program that acquires a String containing a person’s first, middle, and last names,
