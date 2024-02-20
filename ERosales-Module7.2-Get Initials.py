@@ -43,10 +43,11 @@ def main():
     while repeat != 'N':
         name = getname()
         print(make_initials(name))
-        repeat =(input('Another (Y/N):  ')).upper()
+        repeat = (input('Another (Y/N):  ')).upper()
         if repeat != 'Y':
             repeat = 'N'
             print('\nHave a nice day!')
 
 
-main()
+if __name__ == "__main()__":
+    main()
