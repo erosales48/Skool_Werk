@@ -71,6 +71,7 @@ def main():
             repeat = 'N'
             print('\nHave a nice day!')
 
+
 # standard main call
 if __name__ == "__main__":
     main()
