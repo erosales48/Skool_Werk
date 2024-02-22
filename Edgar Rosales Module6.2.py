@@ -14,12 +14,12 @@
 
 # Function defining tuple
 def get_lance():
-    LANCE = (('AS7-A', 'Atlas     ', 'Assault', 100, 10702000.0),
+    lance = (('AS7-A', 'Atlas     ', 'Assault', 100, 10702000.0),
              ('BLR-3M', 'Battlemaster', 'Assault', 85, 8967905.0),
              ('CPLT-C4', 'Catapult   ', 'Heavy', 65, 5830963.0),
              ('TDR-5S', 'Thunderbolt', 'Heavy', 65, 5396023.0),
              ('WHM-7M', 'Warhammer', 'Heavy', 70, 6771384.0))
-    sorted_lance = sorted(LANCE, key=lambda x: x[3])
+    sorted_lance = sorted(lance, key=lambda x: x[3])
     return sorted_lance
 
 
@@ -28,7 +28,7 @@ def print_lance():
     # initialize variables
     count = 0
 
-    # Get record of 2 dimensional tuple
+    # Get record of 2-dimensional tuple
     for mech in get_lance():
 
         # Initialize in loop variables
@@ -42,13 +42,13 @@ def print_lance():
         for element in mech:
             index += 1
             if index == 1:
-                print(f'Model: {element:12}', end = ' ')
+                print(f'Model: {element:12}', end=' ')
             elif index == 2:
-                print(f'Name: {element:12}\t', end = ' ')
+                print(f'Name: {element:12}\t', end=' ')
             elif index == 3:
-                print(f'Class: {element:7}\t', end = ' ')
+                print(f'Class: {element:7}\t', end=' ')
             elif index == 4:
-                print(f'Weight: {element:3} Tons\t', end = ' ')
+                print(f'Weight: {element:3} Tons\t', end=' ')
             elif index == 5:
                 print(f'Cost: {element:>14,.2f} C-Bills')
 
@@ -60,7 +60,7 @@ def print_lance_reverse():
     # initialize variables
     count = 0
 
-    # Get record of 2 dimensional tuple in reverse order
+    # Get record of 2-dimensional tuple in reverse order
     for mech in get_lance()[::-1]:
 
         # Initialize in loop variables
@@ -88,7 +88,7 @@ def print_lance_reverse():
     print(f'Total cost of lance {lance_cost(get_lance()):,.2f} C-Bills')
 
 
-# Function to display only heavy mechs and thir associated total cost
+# Function to display only heavy mechs and their associated total cost
 def print_heavy_lance():
 
     # initialize variables
@@ -107,19 +107,19 @@ def print_heavy_lance():
             index = 0
 
             # print line number
-            print(f'{count}.', end = ' ')
+            print(f'{count}.', end=' ')
 
             # Get fields from record in order and label each, contingent on index number
             for element in mech:
                 index += 1
                 if index == 1:
-                    print(f'Model: {element:12}', end = ' ')
+                    print(f'Model: {element:12}', end=' ')
                 elif index == 2:
-                    print(f'Name: {element:12}\t', end = ' ')
+                    print(f'Name: {element:12}\t', end=' ')
                 elif index == 3:
-                    print(f'Class: {element:7}\t', end = ' ')
+                    print(f'Class: {element:7}\t', end=' ')
                 elif index == 4:
-                    print(f'Weight: {element:3} Tons\t', end = ' ')
+                    print(f'Weight: {element:3} Tons\t', end=' ')
                 elif index == 5:
                     print(f'Cost: {element:>14,.2f} C-Bills')
 
@@ -127,7 +127,7 @@ def print_heavy_lance():
     print(f'Total cost of lance {lance_cost(mech_list):,.2f} C-Bills')
 
 
-# Function to display only Assault mechs and thir associated total cost
+# Function to display only Assault mechs and their associated total cost
 def print_assault_lance():
 
     # Initialize variables
@@ -152,13 +152,13 @@ def print_assault_lance():
             for element in mech:
                 index += 1
                 if index == 1:
-                    print(f'Model: {element:12}', end = ' ')
+                    print(f'Model: {element:12}', end=' ')
                 elif index == 2:
-                    print(f'Name: {element:12}\t', end = ' ')
+                    print(f'Name: {element:12}\t', end=' ')
                 elif index == 3:
-                    print(f'Class: {element:7}\t', end = ' ')
+                    print(f'Class: {element:7}\t', end=' ')
                 elif index == 4:
-                    print(f'Weight: {element:3} Tons\t', end = ' ')
+                    print(f'Weight: {element:3} Tons\t', end=' ')
                 elif index == 5:
                     print(f'Cost: {element:>14,.2f} C-Bills')
 
@@ -180,7 +180,7 @@ def lance_cost(lance):
     return total
 
 
-# Function to display menu, get user input and retun it
+# Function to display menu, get user input and return it
 def menu_call():
     print('          MENU')
     print(' (1) Show all Mechs')
@@ -190,6 +190,7 @@ def menu_call():
     user_input = input('Please enter choice "x" to exit: ')
 
     return user_input
+
 
 # Main function
 def main():
@@ -225,4 +226,7 @@ def main():
         else:
             print('Please use ony menu choices in menu')
 
-main()
+
+# standard main call
+if __name__ == "__main__":
+    main()
