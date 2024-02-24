@@ -22,7 +22,13 @@ class Color:
 def white_ball():
     numbers = [0] * MAX_DIGITS
     for index in range(MAX_DIGITS):
-        numbers[index] = random.randint(START, END)
+        accept = False
+        while accept is False:
+            ball = random.randint(START, END)
+            if ball not in numbers:
+                numbers[index] = ball
+                accept = True
+
     return numbers
 
 
