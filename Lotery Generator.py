@@ -51,27 +51,6 @@ def generate_numbers():
     result_label.config(text=f"Lottery numbers: {numbers:^16}  Mega Ball: {mega}  ", fg="blue")
 
 
-# Main
-def main():
-    # initialize variable
-    response = 'y'
-    # Main loop to run program until user quits
-    while response == 'y':
-        # call functions to get the lottery numbers
-        numbers = white_ball()
-        mega = megaball()
-        # Sort the numbers for aesthetics
-        print('Here are your Lottery numbers:')
-        # Print the numbers for easy viewing and specify color
-        for index in range(MAX_DIGITS):
-            print(f'{Color.WHITE}{numbers[index]}{Color.RESET}', end=' ')
-        # Print the megaball in yellow ot highlight
-        print(f'{Color.YELLOW} {mega}{Color.RESET}')
-        response = input('Would you like another? ')
-        # make lowercase to match even is user uses caps
-        response.lower()
-
-
 # Main GUI window
 root = tk.Tk()
 root.title("Lottery Number Generator")
