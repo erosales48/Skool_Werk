@@ -21,6 +21,7 @@ D_GRADE = 1.0
 F_GRADE = 0.0
 
 
+<<<<<<< HEAD
 class Student:
     def __init__(self, first_name, last_name):
         self.first_name = first_name
@@ -31,12 +32,15 @@ class Student:
         self.courses.append({"course_name": course_name, "credits": credits, "grade": grade})
 
 
+=======
+>>>>>>> origin/master
 # Function to validate no digits in string
 def validate_no_digits(test_string):
     # For loop checks each character in the string for a digit, returns false if found
     valid = False
     while valid is False:
         for char in test_string:
+<<<<<<< HEAD
             if char.isdigit():
                 return False
             else:
@@ -44,6 +48,12 @@ def validate_no_digits(test_string):
     return True
 
 
+=======
+        if char.isdigit():
+            return False
+    return True
+
+>>>>>>> origin/master
 # Function to get user input for student name
 def get_first_name():
     # Initialize variable
@@ -74,6 +84,7 @@ def get_last_name():
             print('\nDo not use numbers in name')
 
 
+<<<<<<< HEAD
 def get_student_courses(student1):
     num_courses = int(input("Enter the number of courses: "))
     for i in range(num_courses):
@@ -97,3 +108,5 @@ def main():
 # standard main call
 if __name__ == "__main__":
     main()
+=======
+>>>>>>> origin/master
