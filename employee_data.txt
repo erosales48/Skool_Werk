@@ -1,0 +1,5 @@
+EMP001,Jenni Gregg,Female,2250.50,None
+EMP002,Sia Siberia,Female,1845.00,None
+EMP003,Johnny Sims,Male,26.25,1
+EMP004,Emiri Momota,Female,22.75,2
+EMP2301,Jim Strong,Male,18.00,3
